@@ -180,7 +180,7 @@ Utilize o arquivo SQL fornecido, `nortwhind.sql`, para popular o seu banco de da
 1. **Iniciar o Docker Compose** Execute o comando abaixo para subir os serviços:
     
     ```
-    docker-compose up
+    docker compose up -d
     ```
     
     Aguarde as mensagens de configuração, como:
@@ -207,11 +207,11 @@ Configure um novo servidor no PgAdmin:
 3. **Parar o Docker Compose** Pare o servidor iniciado pelo comando `docker-compose up` usando Ctrl-C e remova os contêineres com:
     
     ```
-    docker-compose down
+    docker compose down
     ```
     
 4. **Arquivos e Persistência** Suas modificações nos bancos de dados Postgres serão persistidas no volume Docker `postgresql_data` e podem ser recuperadas reiniciando o Docker Compose com `docker-compose up`. Para deletar os dados do banco, execute:
     
     ```
-    docker-compose down -v
+    docker compose down -v
     ```
